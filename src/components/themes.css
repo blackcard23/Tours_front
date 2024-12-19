@@ -1,0 +1,69 @@
+:root {
+    --background-gradient-from: #d1fae5;
+    --background-gradient-to: #c7d2fe;
+    --header-gradient-from: #0f766e;
+    --header-gradient-to: #4338ca;
+    --text-primary: #1f2937;
+    --text-secondary: #4b5563;
+    --card-bg: #ffffff;
+    --hover-card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --button-bg: #34d399;
+    --button-hover-bg: #059669;
+    --toast-bg: #ffffff;
+    --toast-text: #1f2937;
+}
+
+.dark {
+    --background-gradient-from: #1f2937;
+    --background-gradient-to: #111827;
+    --header-gradient-from: #1e3a8a;
+    --header-gradient-to: #0f172a;
+    --text-primary: #ffffff;
+    --text-secondary: #d1d5db;
+    --card-bg: #374151;
+    --hover-card-shadow: 0 4px 6px rgba(255, 255, 255, 0.1);
+    --button-bg: #3b82f6;
+    --button-hover-bg: #2563eb;
+    --toast-bg: #1f2937;
+    --toast-text: #f3f4f6;
+}
+
+body {
+    background: linear-gradient(to bottom right,
+            var(--background-gradient-from),
+            var(--background-gradient-to));
+    color: var(--text-primary);
+    transition: background 0.3s, color 0.3s;
+}
+
+header {
+    background: linear-gradient(to right,
+            var(--header-gradient-from),
+            var(--header-gradient-to));
+}
+
+.card {
+    background-color: var(--card-bg);
+    box-shadow: var(--hover-card-shadow);
+    transition: box-shadow 0.3s, background-color 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+button {
+    background-color: var(--button-bg);
+    color: #fff;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg);
+}
+
+.toast-container {
+    background-color: var(--toast-bg);
+    color: var(--toast-text);
+    border-radius: 8px;
+}
